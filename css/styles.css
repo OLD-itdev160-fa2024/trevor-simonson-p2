@@ -1,0 +1,69 @@
+body {
+    width: 40%;
+    margin: 2px auto; 
+    font-family: "sometype mono", sans-serif, Courier;
+}
+
+h1{
+    font-family: "Geostar";
+    text-align: center;
+}
+
+header p{
+    font-size: 2rem;
+}
+
+#asteroid-list{
+    display: flex;
+}
+
+
+.asteroid-info {
+    background: #90ee90;
+    width: 45%;
+    border: 1px solid black;
+    padding: .5rem;
+    margin: .5rem;
+}
+button{
+    padding: .7rem;
+    font-family: "sometype mono",sans-serif,Courier;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#next-button{
+    float: right;
+}
+
+
+/*Stolen From the Internet*/
+.lds-dual-ring {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    border-radius: 50%;
+    border: 6px solid #000000;
+    border-color: #070303 transparent #0f0d0d transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
