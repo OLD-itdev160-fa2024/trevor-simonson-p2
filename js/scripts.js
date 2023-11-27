@@ -5,23 +5,21 @@ var apiLink = "https://api.nasa.gov/neo/rest/v1/feed?start_date=" + date + "&end
 
 init();
 
-function init(){
+async function init(){
     document.getElementById("current-date").appendChild(document.createTextNode(date));
+    //var neos = await fetch(apiLink, {mode: 'no-cors'})
     getNeoAPI(apiLink);
 }
 
 function getNeoAPI(apiLink){
- 
-
     return fetch(apiLink)
     .then(response => {
-      return response.json();
-    })
-    .then(data => {
+      return response.json()
+    }).then(data => {
         const links = data.links;
         const neos = data.near_earth_objects;
         createNeosElements(neos);
-        //linkButtons(links);
+        linkButtons(links);
 
     });
 }
@@ -66,7 +64,7 @@ function createNeosElements(neos){
 
 function linkButtons(links){
         var nextLink = links.next;
-        var previousLink = links.previous;
+        var previousLink = links.prev;
         var nextButton = document.getElementById('next-button');
         var previousButton = document.getElementById('previous-button');
 

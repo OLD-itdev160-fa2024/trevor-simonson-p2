@@ -1,7 +1,14 @@
+
+html{
+    background-color: rgb(223, 223, 223);
+}
+
 body {
+    color: #494949;
     width: 40%;
     margin: 2px auto; 
     font-family: "sometype mono", sans-serif, Courier;
+    padding-bottom: 30px;
 }
 
 h1{
@@ -15,12 +22,15 @@ header p{
 
 #asteroid-list{
     display: flex;
+    flex-wrap: wrap;
 }
 
 
 .asteroid-info {
     background: #90ee90;
+    flex-grow: 1;
     width: 45%;
+    max-width: 45%;
     border: 1px solid black;
     padding: .5rem;
     margin: .5rem;
@@ -36,7 +46,9 @@ button{
     float: right;
 }
 
-
+#current-date{
+    font-weight: bold;
+}
 /*Stolen From the Internet*/
 .lds-dual-ring {
     display: block;
